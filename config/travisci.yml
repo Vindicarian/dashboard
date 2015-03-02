@@ -1,0 +1,11 @@
+org:
+  auth_token: pRob6KMCmg6xD3L3xoCm
+  repositories:
+    ci_travis_radar: Vindicarian/dashboard
+  type: org
+
+# pro:
+#   auth_token: my_pro_auth_token
+#   repositories:
+#     ci_travis_zendesk: zendesk/zendesk
+#   type: pro
