@@ -8,7 +8,7 @@ require 'open-uri'
 #   <name> => <uri>
 # Example:
 #   hangouts: "https://www.google.com/calendar/ical/<hash>.calendar.google.com/private-<hash>/hangouts.ics"
-calendars = {Public_Pivotal_Seattle_Events: "https://www.google.com/calendar/ical/pivotal.io_qgrlap9ooml7tojb6i3rou6dag%40group.calendar.google.com/public/basic.ics"}
+calendars = {Public_Pivotal_Seattle_Events: "https://www.google.com/calendar/ical/pivotal.io_qgrlap9ooml7tojb6i3rou6dag%40group.calendar.google.com/private-3dc39bd4e4c0d9e7c019e3581085958f/basic.ics"}
 
 SCHEDULER.every '1m', :first_in => 0 do |job|
     
