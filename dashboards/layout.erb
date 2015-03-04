@@ -10,6 +10,26 @@
 
   <title><%= yield_content(:title) %></title>
 
+  <script src="./bower_components/scream/dist/scream.js"></script>
+  <script src="./bower_components/brim/dist/brim.js"></script>
+  <script>
+  window.addEventListener('DOMContentLoaded', function () {
+      var scream,
+          brim;
+
+      scream = gajus.Scream({
+          width: {
+              portrait: 320,
+              landscape: 640
+          }
+      });
+
+      brim = gajus.Brim({
+          viewport: scream
+      });
+  });
+  </script>
+
   <!-- The javascript and css are managed by sprockets. The files can be found in the /assets folder-->
   <script type="text/javascript" src="/assets/application.js"></script>
   <link rel="stylesheet" href="/assets/application.css">
@@ -19,16 +39,18 @@
 
 </head>
   <body>
-    <div id="container">
-      <%= yield %>
-    </div>
-  
-    <% if development? %>
-      <div id="saving-instructions">
-        <p>Paste the following at the top of <i><%= params[:dashboard] %>.erb</i></p>
-        <textarea id="gridster-code"></textarea>
+    <div id="brim-mask">
+      <div id="container">
+        <%= yield %>
       </div>
-      <a href="#saving-instructions" id="save-gridster">Save this layout</a>
-    <% end %>
+    
+      <% if development? %>
+        <div id="saving-instructions">
+          <p>Paste the following at the top of <i><%= params[:dashboard] %>.erb</i></p>
+          <textarea id="gridster-code"></textarea>
+        </div>
+        <a href="#saving-instructions" id="save-gridster">Save this layout</a>
+      <% end %>
+    </div>
   </body>
 </html>
