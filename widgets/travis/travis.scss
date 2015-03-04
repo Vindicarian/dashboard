@@ -2,10 +2,11 @@
 // Sass declarations
 // ----------------------------------------------------------------------------
 $value-color:              #FFF;
-$background-color:         #78A300;
-$background-error-color:   #EC663C;
-$background-passed-color:  #78A300;
-$background-started-color: #E7D100;
+$background-color:         #8fb347;
+$background-error-color:   #A6C6E6;
+$background-passed-color:  #8fb347;
+$background-started-color: #47bbb3;
+
 
 $title-color:       rgba(255, 255, 255, 0.7);
 $label-color:       rgba(255, 255, 255, 0.7);
@@ -15,6 +16,7 @@ $moreinfo-color:    rgba(255, 255, 255, 0.7);
 // Widget-list styles
 // ----------------------------------------------------------------------------
 .widget-travis{
+
 
   background-color: $background-color;
   vertical-align: top;
