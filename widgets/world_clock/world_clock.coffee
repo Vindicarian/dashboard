@@ -1,12 +1,21 @@
 class Dashing.WorldClock extends Dashing.Widget
   # configuration
+  #could tidy this up: empty area array under main section, move SEA
   locations: [
-    { zone: "Asia/Singapore", display_location: "SG" },
-    { zone: "Asia/Jakarta", display_location: "JK" },
-    { zone: "America/Los_Angeles", display_location: "SF", primary: true },
-    { zone: "America/New_York", display_location: "NYC" },
-    { zone: "Europe/London", display_location: "EDH" }
+    { zone: "America/Los_Angeles", display_location: "WEST", areas: [ {loc: "SEA"}, { loc: "SFO"}, { loc: "PAL" }, { loc: "LAX" } ] },
+    { zone: "America/Los_Angeles", display_location: "MAIN", areas:[], primary:true }
+    { zone: "America/New_York", display_location: "EAST", areas: [ {loc:"NYC"}, {loc:"TOR"}, {loc:"BOS"}, {loc:"D.C."}]}
+    { zone: "America/Denver", display_location: "MIDWEST", areas:[ {loc: "DEN"}, {loc: "BDR"}]}
   ]
+
+
+#    { zone: "America/Los_Angeles", display_location: "SF"},
+#    { zone: "America/Los_Angeles", display_location: "LAX"}
+#    { zone: "America/Denver", display_location: "DEN"},
+#    { zone: "America/New_York", display_location: "NYC" },
+#    { zone: "America/Toronto", display_location: "TOR"}
+#    { zone: "Europe/London", display_location: "LON" }
+#    { zone: "Asia/Tokyo", display_location: "TKY"}
 
   startClock: ->
     for location in @locations
@@ -14,10 +23,16 @@ class Dashing.WorldClock extends Dashing.Widget
       location.time = [date.hours(), date.minutes(), date.seconds()].map (n)->
         ('0' + n).slice(-2)
       .join(':')
+
+      #location.time are properly formatted times at this point
+
+      #i think this is dictating width of clock?
       minutes = 60 * date.hours() + date.minutes()
       totalWidth = document.querySelector('.hours').clientWidth - 1
       offset = (minutes / (24.0 * 60)) * totalWidth
 
+
+      #per browser basis, translates the queryselector'd display locations on X according to width/offset dictated above
       clock = document.querySelector("." + location.display_location)
       if(clock)
         ['-webkit-transform', '-moz-transform', '-o-transform', '-ms-transform', 'transform'].forEach (vendor) ->
