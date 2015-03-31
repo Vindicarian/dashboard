@@ -2,10 +2,11 @@ class Dashing.WorldClock extends Dashing.Widget
   # configuration
   #could tidy this up: empty area array under main section, move SEA
   locations: [
-    { zone: "America/Los_Angeles", display_location: "WEST", areas: [ {loc: "SEA"}, { loc: "SFO"}, { loc: "PAL" }, { loc: "LAX" } ] },
+    { zone: "America/Los_Angeles", display_location: "WEST", areas: [{ loc: "SFO"},{ loc: "PAL" },{ loc: "LAX" }],offset:true , left:true},
     { zone: "America/Los_Angeles", display_location: "MAIN", areas:[], primary:true }
-    { zone: "America/New_York", display_location: "EAST", areas: [ {loc:"NYC"}, {loc:"TOR"}, {loc:"BOS"}, {loc:"D.C."}]}
+    { zone: "America/New_York", display_location: "EAST", areas: [ {loc:"NYC"}, {loc:"TOR"}, {loc:"BOS"}, {loc:"D.C."}], right:true}
     { zone: "America/Denver", display_location: "MIDWEST", areas:[ {loc: "DEN"}, {loc: "BDR"}]}
+    { zone: "America/Chicago", display_location: "MIDEAST", areas:[ {loc: "CHI"}], offset: true}
   ]
 
 

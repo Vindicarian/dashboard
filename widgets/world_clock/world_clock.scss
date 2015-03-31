@@ -1,7 +1,7 @@
 .widget.widget-world-clock {
   $dark-text: #33A;
   $dark-background: #A8A8A8;
-  font-size: 2em;
+  font-size: 35px;
   padding-top: 55px;
 
   > ul li {
@@ -45,16 +45,28 @@
     li {
       position: absolute;
     }
+    .placeholder_clock {
+      height: 40px;
+      width: 5px;
+      background: $dark-background;
+    }
 
     .placeholder {
-      height: 30px;
-      width: 2px;
+      height: 25px;
+      width: 3px;
+      background: $dark-background;
+    }
+
+    .placeholder2 {
+      height: 95px;
+      width: 3px;
       background: $dark-background;
     }
 
     .label {
+      padding: 3px;
       position: relative;
-      color: $dark-background;
+      color: #d3d3e9;
 
       .location {
         margin-left: -50%;
@@ -67,6 +79,20 @@
         position: absolute;
         top: 0;
       }
+    }
+
+    .left {
+      -ms-transform: translate(-25px, 0px);
+      -webkit-transform: translate(-25px, 0px);
+      transform: translate(-25px, 0px);
+      -moz-transform: translate(-25px, 0px);
+    }
+
+    .right {
+      -ms-transform: translate(25px, 0px);
+      -webkit-transform: translate(25px, 0px);
+      transform: translate(25px, 0px);
+      -moz-transform: translate(25px, 0px);
     }
   }
 }

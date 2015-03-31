@@ -28,6 +28,9 @@ config_file = File.dirname(File.expand_path(__FILE__)) + '/../config/travisci.ym
 config = YAML::load(File.open(config_file))
 
 SCHEDULER.every('2m', first_in: '1s') {
+  puts "look here for stuff"
+  puts config
+  puts "*"*20
   config.each do |type, type_config|
     unless type_config["repositories"].nil?
       type_config["repositories"].each do |data_id, repo|
