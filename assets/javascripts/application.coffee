@@ -11,7 +11,7 @@ console.log("Yeah! The dashboard has started!")
 
 Dashing.on 'ready', ->
   console.log(moment)
-  Dashing.widget_margins ||= [5, 5]
+  Dashing.widget_margins ||= [5, 15]
   Dashing.widget_base_dimensions ||= [200, 360]
   Dashing.numColumns ||= 6
 
