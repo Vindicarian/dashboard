@@ -1,10 +1,8 @@
 org:
   auth_token: 3g_XB6e8BKkEp3M_HiNHlg
   repositories:
-    #ci_travis_radar: Vindicarian/dashboard
     ci_travis_cedar: pivotal/cedar
     ci_travis_radar: pivotal/projectmonitor
-    #ci_travis_radar: pivotal/jasmine
   type: org
 
 # pro:
