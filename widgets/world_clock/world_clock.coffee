@@ -7,8 +7,9 @@ class Dashing.WorldClock extends Dashing.Widget
     { zone: "America/New_York", display_location: "EAST", areas: [ {loc:"NYC"}, {loc:"TOR"}, {loc:"BOS"}, {loc:"D.C."}], right:true}
     { zone: "America/Denver", display_location: "MIDWEST", areas:[ {loc: "DEN"}, {loc: "BDR"}]}
     { zone: "America/Chicago", display_location: "MIDEAST", areas:[ {loc: "CHI"}], offset: true}
-    { zone: "Asia/Tokyo", display_location: "ASIA", areas:[{loc: "TKY"}]}
-    { zone: "Europe/London", display_location: "LON", areas: [{loc:"LON"}]}
+    { zone: "Asia/Tokyo", display_location: "JAPAN", areas:[{loc: "TKY"}]}
+    { zone: "Europe/London", display_location: "ENGLAND", areas: [{loc:"LON"}]}
+    { zone: "Asia/Hong_Kong", display_location: "CHINA", areas: [{loc:"HKG"}], offset:true}
   ]
 
 

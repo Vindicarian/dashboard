@@ -7,21 +7,21 @@
 
         <div class="placeholder" data-hideif="location.primary"></div>
         <div class="placeholder2" data-showif="location.offset"></div>
-        <!--<div class="placeholder_clock" data-showif="location.primary"></div>-->
 
         <div data-foreach-display="location.areas" data-bind-class="location.display_location">
             <div class="label" data-addclass-left="location.left" data-addclass-right="location.right">
                 <div class="location" data-source="display.loc" data-hideif="location.primary"></div>
                 <div class="location local" data-source="time" data-showif="location.primary"></div>
             </div>
+
             <!--this is the one below the clock-->
-            <div class="placeholder" data-showif="location.primary"></div>
+            <div class="placeholder_clock" data-showif="location.primary"></div>
         </div>
 
         <div class="label" data-showif="location.primary  ">
             <div class="location local " data-source="time" data-showif="location.primary"></div>
         </div>
-        <div class="placeholder" data-showif="location.primary"></div>
+        <div class="placeholder_clock" data-showif="location.primary"></div>
     </li>
 </ul>
 
