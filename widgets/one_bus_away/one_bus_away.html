@@ -1,0 +1,27 @@
+<div class = "title">
+  OneBusAway Bus Tracker:
+</div>
+<br />
+<table class = "target" data-foreach-target = "targets">
+  <caption class = "target-name">International District Station</caption>
+  <tr>
+    <th>Route</th>
+    <th>Destination</th>
+    <th>Minutes</th>
+  </tr>
+
+  <tr data-foreach-route = "targets[target]" class="route">
+    <td class = "route-name">
+      <span data-bind="route.name"></span>
+    </td>
+    <td class = "route-info">
+      <span data-bind="route.signage"></span>
+      <br />
+      <span data-bind="route.departure_details"></span>
+    </td>
+    <td class = "route-eta">
+      <span data-bind="route.eta"></span>
+    </td>
+  </tr>
+
+</table>

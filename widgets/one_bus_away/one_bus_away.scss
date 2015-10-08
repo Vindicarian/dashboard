@@ -1,0 +1,41 @@
+
+.widget-one-bus-away {
+  background-color: #4183C5;
+  color: white;
+  font-weight: bold;
+  border: 5px solid rgba(255,255,255, 0.6)
+}
+
+.route-info {
+  color: black;
+  font-size: 14px;
+  text-overflow: ellipsis;
+  box-sizing: border-box;
+}
+
+.route-details {
+  font-size: 10px;
+}
+
+.route {
+  border: 2px solid rgba(255, 255, 255, 0.6)
+}
+
+.target-name {
+  border: 3px solid rgba(255, 255, 255, 0.6);
+  border-style: solid none;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.title {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+table {
+  th {
+    color: black;
+    font-size: 16px;
+  }
+}
