@@ -41,7 +41,7 @@ class RouteInfoFactory
     end
 
     delta = @current - departing
-    delta > 0 ? state = '-' : state = ''
+    delta > 0 ? state = '- ' : state = ''
 
     components = Time.diff(departing, @current, "#{state}%m")
 
