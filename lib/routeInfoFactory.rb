@@ -29,7 +29,7 @@ class RouteInfoFactory
   end
 
   def departureDetails(departure, discrepancy)
-    departure + ' (' + discrepancy + ')'
+      departure + ' (' + discrepancy + ')'
   end
 
   #12 minutes and 40 seconds from now, 5 minutes ago

@@ -6,6 +6,7 @@ gem 'travis'
 gem 'httparty'
 gem 'racksh'
 gem 'time_diff'
+gem 'simple-rss'
 # gem 'ruby',        '1.9.3p448'
 
 ## Remove this if you don't need a twitter widget.
