@@ -9,8 +9,10 @@ class OBACommunicator
   end
 
   def getStopName(stop_number)
-    response = send_oba_request("arrivals-and-departures-for-stop/1_#{stop_number}.json")
+    response = send_oba_request("stop/1_#{stop_number}.json")
     response.body
+    response_obj = JSON.parse(response.body)
+    response_obj['data']['entry']['name']
   end
 
   private
