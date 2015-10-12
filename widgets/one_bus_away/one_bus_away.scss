@@ -21,9 +21,19 @@
   border: 2px solid rgba(255, 255, 255, 0.6);
   border-style: solid none;
 
-  .route-name, .route-eta {
-    font-size: 32px;
+  .route-name, .route-etas {
+    font-size: 40px;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
+}
+
+.route-name {
+  width: 30%;
+}
+
+.route-etas {
+  width: 70%;
 }
 
 .target-name {

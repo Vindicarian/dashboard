@@ -2,26 +2,22 @@
   OneBusAway Bus Tracker:
 </div>
 <br />
-<table class = "target" data-foreach-target = "targets">
+
+<table class = "target" data-foreach-target = "targets" data-hideif = "targets[target].ignore">
   <caption class = "target-name" data-bind ="target"></caption>
   <tr>
     <th>Route</th>
-    <th>Destination</th>
     <th>Minutes</th>
   </tr>
 
   <tr data-foreach-route = "targets[target]" class="route">
     <td class = "route-name">
-      <span data-bind="route.name"></span>
+      <span data-bind="route"></span>
     </td>
-    <td class = "route-info">
-      <span data-bind="route.signage"></span>
-      <br />
-      <span data-bind="route.departure_details"></span>
-    </td>
-    <td class = "route-eta">
-      <span data-bind="route.eta"></span>
+    <td class = "route-etas">
+      <span data-foreach-eta = "targets[target][route]">
+        <span class = "eta" data-bind = "eta"></span>
+      </span>
     </td>
   </tr>
-
 </table>
