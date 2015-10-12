@@ -10,7 +10,7 @@ targets = [
 ]
 
 
-SCHEDULER.every '10m', :first_in => 0 do |job|
+SCHEDULER.every '1m', :first_in => 0 do |job|
   data = {}
   targets.each do |target|
     response_obj = JSON.parse(oba_communicator.getArrivalsAtStop(target[:stop_no]))
