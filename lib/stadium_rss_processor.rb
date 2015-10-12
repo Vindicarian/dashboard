@@ -16,14 +16,14 @@ class StadiumRSSProcessor
 
     events = filterEvents(events)
 
-    events.map do |item|
+    events.map! do |item|
       {
         title: item.title,
         start: DateTime.parse(item.category).to_i
       }
     end
 
-    events.uniq { |e| e.title }[0..1]
+    events.uniq { |e| e[:title] }[0..1]
   end
 
   def filterEvents(events)
