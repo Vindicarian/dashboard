@@ -20,6 +20,13 @@ class RouteInfoFactory
       @data[route] << eta
     end
 
+    @data.each do |key, val|
+      count = val.length - 1
+      @data[key] = val.sort[0..4].map.with_index do |eta, index|
+        index != count ? eta += ', ' : eta
+      end
+    end
+
     if @data.keys.length == 0
       @data['ignore'] = true
     end

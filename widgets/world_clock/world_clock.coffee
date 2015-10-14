@@ -3,24 +3,16 @@ class Dashing.WorldClock extends Dashing.Widget
   #could tidy this up: empty area array under main section, move SEA
   locations: [
     { zone: "America/Los_Angeles", display_location: "WEST", areas: [{ loc: "SFO"},{ loc: "PA" },{ loc: "LAX" }],offset:true , left:true},
-    { zone: "America/Los_Angeles", display_location: "MAIN", areas:[], primary:true }
-    { zone: "America/New_York", display_location: "EAST", areas: [ {loc:"NYC"}, {loc:"TOR"}, {loc:"BOS"}, {loc:"D.C."}], right:true}
-    { zone: "America/Denver", display_location: "MIDWEST", areas:[ {loc: "DEN"}, {loc: "BDR"}]}
-    { zone: "America/Chicago", display_location: "MIDEAST", areas:[ {loc: "CHI"}], offset: true}
-    { zone: "Asia/Tokyo", display_location: "JAPAN", areas:[{loc: "TKY"}]}
-    { zone: "Europe/London", display_location: "ENGLANDIRELAND", areas: [{loc:"LON"}, {loc:"DUB"}]}
-    { zone: "Asia/Vladivostok", display_location: "SYDNEY", areas: [{loc:"SYD"}]}
-    { zone: "Asia/Hong_Kong", display_location: "CHINA", areas: [{loc:"HKG"}, {loc: "SG"}], offset:true}
+    { zone: "America/Los_Angeles", display_location: "MAIN", areas:[], primary:true },
+    { zone: "America/New_York", display_location: "EAST", areas: [ {loc:"NYC"}, {loc:"TOR"}, {loc:"BOS"}, {loc:"D.C."}], right:true},
+    { zone: "America/Denver", display_location: "MIDWEST", areas:[ {loc: "DEN"}, {loc: "BDR"}]},
+    { zone: "America/Chicago", display_location: "MIDEAST", areas:[ {loc: "CHI"}], offset: true},
+    { zone: "Asia/Tokyo", display_location: "JAPAN", areas:[{loc: "TKY"}]},
+    { zone: "Europe/London", display_location: "ENGLANDIRELAND", areas: [{loc:"LON"}, {loc:"DUB"}]},
+    { zone: "Asia/Vladivostok", display_location: "SYDNEY", areas: [{loc:"SYD"}]},
+    { zone: "Asia/Hong_Kong", display_location: "CHINA", areas: [{loc:"HKG"}, {loc: "SG"}], offset: true},
+    { zone: "Europe/Berlin", display_location: "GERMANY", areas: [{loc: "BER"}], offset: true}
   ]
-
-
-#    { zone: "America/Los_Angeles", display_location: "SF"},
-#    { zone: "America/Los_Angeles", display_location: "LAX"}
-#    { zone: "America/Denver", display_location: "DEN"},
-#    { zone: "America/New_York", display_location: "NYC" },
-#    { zone: "America/Toronto", display_location: "TOR"}
-#    { zone: "Europe/London", display_location: "LON" }
-#    { zone: "Asia/Tokyo", display_location: "TKY"}
 
   startClock: ->
     for location in @locations
