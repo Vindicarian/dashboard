@@ -6,7 +6,8 @@ oba_communicator = OBACommunicator.new
 targets = [
   {stop_no: 621, routes: ['71', '71E', '72', '72E', '73', '73E', '74']},
   {stop_no: 620, routes: ['301', '301E']},
-  {stop_no: 1535, routes: ['16', '16E', '99', '99E']}
+  {stop_no: 1535, routes: ['16', '16E', '99', '99E']},
+  {stop_no: 843, routes: ['214', '214E', '554', '554E']}
 ]
 
 
