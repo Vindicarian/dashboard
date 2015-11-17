@@ -1,0 +1,22 @@
+<script type='text/javascript'>
+$(function() {
+    Dashing.widget_base_dimensions = [1200, 1024];
+    Dashing.numColumns = 1;
+    });
+</script>
+
+<style>
+.widget.widget-world-clock .locations .label .location.local {
+  font-size: 160px;
+  margin-top: -65px;
+}
+</style>
+
+<% content_for :title do %>My super sweet dashboard<% end %>
+<div class="gridster">
+  <ul class="clock">
+    <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
+    <div data-view="WorldClock" class="widget widget-world-clock"></div>
+    </li>
+  </ul>
+</div>
