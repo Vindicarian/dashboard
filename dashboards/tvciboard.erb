@@ -1,15 +1,40 @@
 <script type='text/javascript'>
 $(function() {
     Dashing.gridsterLayout('[{"col":2,"row":2,"size_x":1,"size_y":1},{"col":2,"row":1,"size_x":3,"size_y":1},{"col":3,"row":2,"size_x":1,"size_y":1},{"col":4,"row":2,"size_x":1,"size_y":1},{"col":1,"row":1,"size_x":1,"size_y":2}]')
-    Dashing.widget_base_dimensions = [450, 400]
+    Dashing.widget_base_dimensions = [430, 430]
     Dashing.numColumns = 4
     });
 </script>
 
+<style>
+
+.widget.widget-world-clock .locations .placeholder_clock {
+  height: 70px;
+  margin-top: -25px;
+}
+
+.widget.widget-world-clock {
+  padding-top: 340px;
+}
+
+ .widget.widget-world-clock .locations .label .location.local {
+   font-size: 160px;
+   margin-top: -120px;
+ }
+
+ .skewed_to_bot {
+   margin-top: 50px;
+ }
+
+ .skewed_to_bot_more_so {
+   margin-top: 180px;
+ }
+</style>
+
 <% content_for :title do %>My super sweet dashboard<% end %>
 <div class="gridster">
   <ul>
-    <li class = "skewed_to_bot" data-row="2" data-col="2" data-sizex="1" data-sizey="1">
+    <li class = "skewed_to_bot_more_so" data-row="2" data-col="2" data-sizex="1" data-sizey="1">
     <div data-id="google_calendar_Public_Pivotal_Seattle_Events" data-view="GoogleCalendar" style="background-color:#4183C5;"></div>
     <i class="icon-calendar icon-background"></i>
     </li>
@@ -18,18 +43,14 @@ $(function() {
     <div data-view="WorldClock" class="widget widget-world-clock"></div>
     </li>
 
-    <li class = "skewed_to_bot" data-row="2" data-col="3" data-sizex="1" data-sizey="1">
+    <li class = "skewed_to_bot_more_so" data-row="2" data-col="3" data-sizex="1" data-sizey="1">
     <div data-id="ci_travis_cedar" data-view="Travis" data-unordered="true" data-title="Pivotal-Cedar"></div>
     </li>
 
-    <li class = "skewed_to_bot" data-row="2" data-col="4" data-sizex="1" data-sizey="1">
+    <li class = "skewed_to_bot_more_so" data-row="2" data-col="4" data-sizex="1" data-sizey="1">
     <div data-id="ci_travis_radar" data-view="Travis" data-unordered="true" data-title="Pivotal-ProjectMonitor"></div>
     </li>
     <li class = "skewed_to_bot" data-row="1" data-col="1" data-sizex="1" data-sizey="2">
     <div data-id="onebusaway" data-view="OneBusAway" data-unordered="true" data-title="OneBusAway"></div>
-    </li>
-        <li data-row="1" data-col="1" data-sizex="3" data-sizey="2">
-        <div data-id="twitch" data-view="Twitch"></div>
-    </li>
   </ul>
 </div>
