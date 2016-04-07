@@ -13,6 +13,7 @@ gem 'simple-rss'
 gem 'twitter', '>= 5.9.0'
 
 group :development do
+  gem 'rspec'
   gem 'jasmine'
 
   source 'https://rails-assets.org' do

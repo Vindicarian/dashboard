@@ -28,9 +28,10 @@ class StadiumRSSProcessor
 
   def filterEvents(events)
     events.select do |item|
-      date = DateTime.parse(item.category)
+      date = item.dtstart ||
+        DateTime.parse(item.category)
 
-      !isWeekend(date) && isTodayOrWithinTwoWeeks(date)
+      isTodayOrWithinTwoWeeks(date) && !isWeekend(date)
     end
   end
 
@@ -39,15 +40,8 @@ class StadiumRSSProcessor
   end
 
   def isTodayOrWithinTwoWeeks(date)
-    delta = Time.parse(@current.to_s) - Time.parse(date.to_s)
-
-    diff = Time.diff(@current, date);
-
-    if delta > 0
-      diff[:week] == 0 && diff[:day] <= 1
-    else
-      diff[:week] <= 2
-    end
+    delta = (date.day - @current.day)
+    delta >= 0 && delta <= 14
   end
 end
 
