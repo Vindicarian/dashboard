@@ -10,6 +10,12 @@ $light-color:    rgba(255, 255, 255, 0.7);
 // Widget-comment styles
 // ----------------------------------------------------------------------------
 .widget-google-calendar {
+  height: 430px;
+  overflow: hidden;
+
+  &.widget {
+    display:block;
+  }
 
   vertical-align: middle;
 
@@ -34,8 +40,23 @@ $light-color:    rgba(255, 255, 255, 0.7);
     font-family: 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
   }
 
-  .start {
-    color: $light-color;
-    font-size: 1em;
+  // ----------------------------------------------------------------------------
+  // day-formatting
+  // ----------------------------------------------------------------------------
+  .today, .tomorrow {
+    font-size: 1.4em;
+  }
+
+  .today {
+    background: #BD1616;
+  }
+
+  .tomorrow {
+    background: #B7C117;
+    color: black;
+    .title {
+      color: black;
+    }
   }
 }
+

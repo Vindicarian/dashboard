@@ -5,8 +5,6 @@ class Events
               CenturyLink_Events: "http://www.trumba.com/calendars/centurylink-field-events-calendar.ics",
               Safeco_Events: "https://calendar.google.com/calendar/ical/oku5mamlo4ddkutvcg6u736rt4i91nur%40import.calendar.google.com/public/basic.ics" }
 
-  @@data = Array.new
-
   def setData(toData)
     @data = toData
   end
@@ -24,12 +22,20 @@ class Events
     all_events
   end
 
+  def getCssClass(day)
+    if day == Date.today
+      'today'
+    elsif day == Date.tomorrow
+      'tomorrow'
+    end
+  end
+
   def getResult
     @data.map do |e|
       start = e.dtstart
 
-      today = start == Date.today
-      tomorrow = start == Date.tomorrow
+      cssClass = getCssClass(start.to_date)
+
       if e.methods.include? :title
         title=e.title
       else
@@ -37,10 +43,10 @@ class Events
       end
       {
         title: title,
-        start: start.to_time.to_s,
-        end: e.dtend.to_time.to_i,
-        today: today,
-        tomorrow: tomorrow
+        date: start.strftime('%A, %b %e'),
+        start: start.strftime('%k:%M'),
+        end: e.dtend.strftime('%k:%M'),
+        cssClass: cssClass
       }
     end
   end
@@ -50,10 +56,7 @@ class Events
   end
 
   def filter
-    @data.select{ |e| e.dtend.to_time.utc > Time.now.utc }
-    @data.each do |e|
-      p e
-    end
-    @data.uniq!{ |e| e.title }[0..1]
+    @data.select!{ |e| e.dtend.to_time.utc > Time.now.utc }
+    @data.uniq!{ |e| e.summary || e.title }[0..1]
   end
 end
