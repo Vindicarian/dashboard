@@ -100,9 +100,6 @@ GEM
     racksh (1.0.0)
       rack (>= 1.0)
       rack-test (>= 0.5)
-    rails-assets-jasmine (2.3.4)
-    rails-assets-jasmine-ajax (3.2.0)
-      rails-assets-jasmine (~> 2)
     rails_12factor (0.0.2)
       rails_serve_static_assets
       rails_stdout_logging
@@ -195,13 +192,9 @@ DEPENDENCIES
   jasmine
   pg (= 0.17.1)
   racksh
-  rails-assets-jasmine-ajax!
   rails_12factor (= 0.0.2)
   rspec
   simple-rss
   time_diff
   travis
   twitter (>= 5.9.0)
-
-BUNDLED WITH
-   1.11.2

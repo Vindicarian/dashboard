@@ -7,13 +7,13 @@ gem 'httparty'
 gem 'racksh'
 gem 'time_diff'
 gem 'simple-rss'
+gem 'rspec'
 # gem 'ruby',        '1.9.3p448'
 
 ## Remove this if you don't need a twitter widget.
 gem 'twitter', '>= 5.9.0'
 
 group :development do
-  gem 'rspec'
   gem 'jasmine'
 
   source 'https://rails-assets.org' do
